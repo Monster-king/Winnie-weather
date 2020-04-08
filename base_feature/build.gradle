@@ -1,0 +1,29 @@
+apply from: '../commonModule.gradle'
+apply from: '../commonKaptModule.gradle'
+
+dependencies {
+    api project(":base")
+
+    implementation androidX.multidex
+
+    //debug
+    releaseImplementation project(":f-debug-no-op")
+    debugImplementation project(":f-debug")
+    qaImplementation project(":f-debug")
+
+    implementation project(":i-push-notification")
+    implementation project(":i-network")
+    implementation project(":i-initialization")
+
+    api rxBinding2.core
+    api rxBinding2.kotlin
+    api rxBinding2.appcompatV7
+
+    api(firebase.crashlytics) {
+        transitive = true
+    }
+
+    implementation debug.anrWatchDog
+    implementation debug.timber
+    implementation debug.rxJava2Debug
+}

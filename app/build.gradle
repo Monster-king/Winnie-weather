@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+//apply plugin: 'com.google.firebase.crashlytics' todo uncoment for real app
+//apply plugin: 'com.google.firebase.appdistribution' todo uncoment for real app
+
+apply from: '../config.gradle'
+
+apply from: '../setLabelToIcon.gradle'
+apply from: '../keystore/signingConfigs.gradle'
+apply from: '../buildTypes.gradle'
+apply from: '../commonAndroidDefaultConfig.gradle'
+apply from: '../androidTestConfiguration.gradle'
+
+android {
+
+    defaultConfig {
+        applicationId meta.applicationId
+
+        versionCode meta.versionCode
+        versionName meta.versionName
+
+        //setProperty("archivesBaseName", "$applicationName-$versionName-($versionCode)") //todo uncomment for real app
+
+        testBuildType 'debug' //todo replace to 'qa' for real app
+    }
+}
+
+dependencies {
+    implementation project(":i-push-notification")
+    implementation project(":f-main")
+    implementation project(":f-splash")
+
+    implementation lang.kotlinStdLib
+    implementation lang.jetbrainsAnnotations
+
+    implementation di.dagger
+    kapt di.daggerKapt
+
+    implementation androidX.annotation
+    implementation androidX.appcompat
+}
+
+configurations.all {
+    resolutionStrategy.cacheDynamicVersionsFor 1, 'seconds'
+    resolutionStrategy.cacheChangingModulesFor 1, 'seconds'
+}
+
+//todo uncoment for real app
+//apply plugin: 'com.google.gms.google-services'

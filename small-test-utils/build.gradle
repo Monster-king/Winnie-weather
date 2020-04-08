@@ -1,0 +1,26 @@
+apply from: '../config.gradle'
+apply from: '../commonModule.gradle'
+
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    api project(":i-network")
+
+    implementation project(":base")
+    implementation lang.annimonStream
+    implementation test.junit
+    implementation test.robolectric
+    implementation test.shadowsMultidex
+    implementation leakCanary.coreNoOp
+    implementation di.dagger
+    kapt di.daggerKapt
+}
+
+//Надстройка, которая пропускает сборку модуля при androidTest
+gradle.taskGraph.whenReady {
+    gradle.taskGraph.allTasks.each {
+        if (it.project == project && gradle.taskGraph.allTasks.find { it.name == "assembleAndroidTest" } != null) {
+            it.onlyIf { false }
+        }
+    }
+}
