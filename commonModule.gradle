@@ -9,7 +9,6 @@ android {
 
     buildTypes {
         qa {
-            buildConfigField "String", "BASE_URL", '""'
             multiDexEnabled true
             minifyEnabled true
             debuggable = true
@@ -18,13 +17,11 @@ android {
         }
 
         debug {
-            buildConfigField "String", "BASE_URL", '""'
             multiDexEnabled true
             debuggable = true
         }
 
         release {
-            buildConfigField "String", "BASE_URL", '""'
             minifyEnabled true
         }
     }

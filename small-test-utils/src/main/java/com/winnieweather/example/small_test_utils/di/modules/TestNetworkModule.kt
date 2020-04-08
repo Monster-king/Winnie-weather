@@ -76,5 +76,5 @@ class TestNetworkModule {
 
     @Provides
     @PerApplication
-    internal fun provideBaseUrl() = BaseUrl(TEST_API_URL, null)
+    internal fun provideBaseUrl() = BaseUrl(TEST_API_URL, "api")
 }

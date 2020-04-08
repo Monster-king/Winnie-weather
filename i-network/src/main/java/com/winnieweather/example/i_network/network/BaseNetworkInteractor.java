@@ -27,7 +27,6 @@ import ru.surfstudio.android.rx.extension.FunctionSafe;
  * Базовый класс репозитория
  * Можно переопределить DataStrategy по умолчанию в классе {@link DataStrategy}
  */
-@Deprecated
 public class BaseNetworkInteractor {
 
     private ConnectionProvider connectionProvider;

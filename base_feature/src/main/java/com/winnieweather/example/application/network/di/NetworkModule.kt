@@ -80,9 +80,9 @@ class NetworkModule {
     @PerApplication
     internal fun provideBaseUrl(): BaseUrl {
         return if (DebugAppInjector.debugInteractor.isTestServerEnabled) {
-            BaseUrl(TEST_API_URL, null)
+            BaseUrl(TEST_API_URL, "api")
         } else {
-            BaseUrl(BASE_API_URL, null)
+            BaseUrl(BASE_API_URL, "api")
         }
     }
 }

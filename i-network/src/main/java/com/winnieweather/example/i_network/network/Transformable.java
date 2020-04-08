@@ -20,7 +20,6 @@ package com.winnieweather.example.i_network.network;
  *
  * @param <T>
  */
-@Deprecated
 public interface Transformable<T> {
     T transform();
 }
