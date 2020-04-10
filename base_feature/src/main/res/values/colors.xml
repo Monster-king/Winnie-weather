@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
 
-    <color name="colorWindowBackgroundDark">#000</color>
-    <color name="colorWindowBackgroundDarkTransparent">#3c000000</color>
-    <color name="colorWindowBackgroundLight">#fff</color>
-    <color name="colorWindowBackgroundLightTransparent">#3cffffff</color>
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorAccent">@color/mustard</color>
+
+    <color name="colorWindowBackgroundLight">@color/white</color>
+    <color name="colorWindowBackgroundLightTransparent">@color/white_23</color>
+    <color name="colorWindowBackgroundSecondary">@color/solitude</color>
+
+    <color name="colorSplashBackground">@color/summer_sky</color>
+
+    <color name="textColorPrimary">@color/black</color>
+    <color name="textColorSecondary">@color/dark_gray</color>
+
+    <color name="colorIconDefault">@color/dark_gray</color>
+    <color name="colorIconAccent">@color/free_speech_blue</color>
 </resources>

@@ -12,6 +12,8 @@ import ru.surfstudio.android.shared.pref.NO_BACKUP_SHARED_PREF
 import com.winnieweather.example.base.util.StringsProvider
 import com.winnieweather.example.i_initialization.InitializeAppInteractor
 import com.winnieweather.example.i_push_notification.storage.FcmStorage
+import com.winnieweather.example.i_weather.WeatherInteractor
+import ru.surfstudio.android.location.DefaultLocationInteractor
 import javax.inject.Named
 
 /**
@@ -33,4 +35,5 @@ interface AppProxyDependencies {
 
     @Named(NO_BACKUP_SHARED_PREF)
     fun sharedPreferences(): SharedPreferences
+    fun weatherInteractor(): WeatherInteractor
 }

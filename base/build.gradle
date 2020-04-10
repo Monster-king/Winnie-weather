@@ -37,6 +37,8 @@ dependencies {
                     "standard-dialog",
                     "message-controller",
                     "broadcast-extension",
-                    "rxbus"]
+                    "rxbus",
+                    "location"
+            ]
     )
 }

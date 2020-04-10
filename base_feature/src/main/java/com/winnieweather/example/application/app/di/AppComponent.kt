@@ -11,6 +11,7 @@ import com.winnieweather.example.application.notification.FcmModule
 import com.winnieweather.example.application.notification.MessagingService
 import com.winnieweather.example.application.notification.NotificationModule
 import com.winnieweather.example.application.storage.di.SharedPrefModule
+import com.winnieweather.example.application.weather.di.WeatherModule
 
 @PerApplication
 @Component(modules = [
@@ -22,7 +23,8 @@ import com.winnieweather.example.application.storage.di.SharedPrefModule
     NetworkModule::class,
     OkHttpModule::class,
     FcmModule::class,
-    NotificationModule::class
+    NotificationModule::class,
+    WeatherModule::class
 ])
 interface AppComponent : AppProxyDependencies {
     fun inject(to: MessagingService)

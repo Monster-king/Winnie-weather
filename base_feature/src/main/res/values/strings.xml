@@ -1,18 +1,45 @@
 <resources>
     <string name="notification_channel_id" translatable="false">WEATHER_ID</string>
-    <string name="notification_channel_name">WEATHER</string>
+    <string name="notification_channel_name" translatable="false">WEATHER</string>
 
     <string name="app_name">Winnie weather</string>
-    <string name="server_error_message">Произошла ошибка сервера. Попробуйте позже еще раз</string>
-    <string name="server_error_not_found">Произошла ошибка, данные не найдены. Попробуйте позже еще раз</string>
-    <string name="default_http_error_message">Произошла ошибка загрузки данных, возможно, не вся информация на экране актуальна</string>
-    <string name="forbidden_error_error_message">Доступ запрещен</string>
-    <string name="no_internet_connection_error_message">Не удалось загрузить данные. Проверьте соединение с интернетом и попробуйте еще раз</string>
-    <string name="bad_response_error_message">Произошла ошибка загрузки данных на экране. Попробуйте позже еще раз</string>
-    <string name="unexpected_error_error_message">Непредвиденная ошибка</string>
-    <string name="common_error_message">Произошла ошибка загрузки данных,\nпопробуйте обновить экран позже</string>
+    <string name="server_error_message">A server error has been occurred. Try again later.</string>
+    <string name="server_error_not_found">An error has been occurred, data not found. Try later</string>
+    <string name="default_http_error_message">An error has been occurred while loading data, maybe not all information on the screen is up to date</string>
+    <string name="forbidden_error_error_message">Access denied</string>
+    <string name="no_internet_connection_error_message">Failed to load data. Check your internet connection and try again.</string>
+    <string name="bad_response_error_message">An error has been occurred while loading data on the screen. Try again later.</string>
+    <string name="unexpected_error_error_message">Unexpected error</string>
+    <string name="common_error_message">Error loading data,\ntry refresh the screen later</string>
 
-    <string name="state_empty_text">Ничего не найдено</string>
-    <string name="state_error_message">Произошла ошибка</string>
-    <string name="state_error_btn">Обновить</string>
+    <string name="state_empty_text">Nothing was found</string>
+    <string name="state_error_message">An error has been occurred</string>
+    <string name="state_error_btn">Reload</string>
+
+    <!--region permissions-->
+    <string name="permission_rational">Getting weather information at your current location requires permission to use geolocation</string>
+    <string name="settings_rational">Access to the location is prohibited forever. You can issue permission only through the settings</string>
+    <!--endregion-->
+
+    <!--region MainActivityView-->
+    <string name="main_activity_title_text">The weather can change in an hour, but the mood for the whole day</string>
+    <string name="main_activity_degree_celsius">°C</string>
+    <!--endregion-->
+
+    <!--region DetailInfoWidget-->
+    <string name="wind_status_title_text">Wind Status</string>
+    <string name="km_to_hour_text">km/h</string>
+    <string name="km_text">km</string>
+    <string name="percent_symbol">%</string>
+    <string name="sunrise_sunset_text">Sunrise &amp; Sunset</string>
+    <string name="humidity_text">Humidity</string>
+    <string name="visibility_text">Visibility</string>
+    <string name="detail_info_title_text">Today\'s Highlights</string>
+    <!--endregion-->
+
+    <!--region Forecast-->
+    <string name="clouds_lover_20">Clear sky like your face!</string>
+    <string name="clouds_lover_50">Partly cloudy…</string>
+    <string name="clouds_very_much">It seems the rain is starting!</string>
+    <!--endregion-->
 </resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_height="160dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="24dp"
+    android:background="@drawable/bg_round_rect_24_white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:elevation="1dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sunrise_sunset_text"
+        android:textAppearance="@style/Text.Light.16.SecondaryColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/bg_round_mustard_gold"
+            android:contentDescription="@string/content_description"
+            android:padding="4dp"
+            android:src="@drawable/ic_arrow_up"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/sunrise_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/Text.Light.16.PrimaryColor"
+            tools:text="6:35 AM" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/bg_round_mustard_gold"
+            android:contentDescription="@string/content_description"
+            android:padding="4dp"
+            android:src="@drawable/ic_arrow_down"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/sunset_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/Text.Light.16.PrimaryColor"
+            tools:text="6:35 PM" />
+    </LinearLayout>
+</LinearLayout>

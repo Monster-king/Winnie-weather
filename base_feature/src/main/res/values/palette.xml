@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--https://www.color-blindness.com/color-name-hue/-->
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_23">#3CFFFFFF</color>
+
+    <color name="black">#000000</color>
+    <color name="black_23">#3c000000</color>
+
+    <color name="dark_gray">#B3B3B3</color>
+    <color name="solitude">#F6F6F8</color>
+
+    <color name="summer_sky">#2BAAE3</color>
+    <color name="free_speech_blue">#4050D2</color>
+
+    <color name="mustard">#FFE15C</color>
+    <color name="golden_tainoi">#FFBF5E</color>
+</resources>

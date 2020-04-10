@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ru.surfstudio.standard.f_splash.SplashActivityView">
+    android:background="@color/colorSplashBackground"
+    android:fitsSystemWindows="true"
+    tools:context=".SplashActivityView">
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:srcCompat="@android:mipmap/sym_def_app_icon" />
-</FrameLayout>
+        android:src="@drawable/splash" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

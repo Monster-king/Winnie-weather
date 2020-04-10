@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Winnie weather</string>
+    <string name="server_error_message">Произошла ошибка сервера. Попробуйте позже еще раз</string>
+    <string name="server_error_not_found">Произошла ошибка, данные не найдены. Попробуйте позже еще раз</string>
+    <string name="default_http_error_message">Произошла ошибка загрузки данных, возможно, не вся информация на экране актуальна</string>
+    <string name="forbidden_error_error_message">Доступ запрещен</string>
+    <string name="no_internet_connection_error_message">Не удалось загрузить данные. Проверьте соединение с интернетом и попробуйте еще раз</string>
+    <string name="bad_response_error_message">Произошла ошибка загрузки данных на экране. Попробуйте позже еще раз</string>
+    <string name="unexpected_error_error_message">Непредвиденная ошибка</string>
+    <string name="common_error_message">Произошла ошибка загрузки данных,\nпопробуйте обновить экран позже</string>
+
+    <string name="state_empty_text">Ничего не найдено</string>
+    <string name="state_error_message">Произошла ошибка</string>
+    <string name="state_error_btn">Обновить</string>
+
+    <!--region permissions-->
+    <string name="permission_rational">Получение информации о погоде по текущему местоположению требует разрешение на использование геолокации</string>
+    <string name="settings_rational">Доступ к местоположению запрещен навсегда. Выдать разрешение можно только через настройки</string>
+    <!--endregion-->
+
+    <!--region MainActivityView-->
+    <string name="main_activity_title_text">Погода может меняться за час, а настроение на целый день</string>
+    <string name="main_activity_degree_celsius">°C</string>
+    <!--endregion-->
+
+    <!--region DetailInfoWidget-->
+    <string name="wind_status_title_text">Статус Ветра</string>
+    <string name="km_to_hour_text">км/ч</string>
+    <string name="km_text">км</string>
+    <string name="percent_symbol">%</string>
+    <string name="sunrise_sunset_text">Восход &amp; Закат</string>
+    <string name="humidity_text">Влажность</string>
+    <string name="visibility_text">Видимость</string>
+    <string name="detail_info_title_text">Cегодняшние Cобытия</string>
+    <!--endregion-->
+
+    <!--region Forecast-->
+    <string name="clouds_lover_20">Чистое небо как ваше лицо!</string>
+    <string name="clouds_lover_50">Местами пасмурно</string>
+    <string name="clouds_very_much">Кажется дождь собирается</string>
+    <!--endregion-->
+</resources>

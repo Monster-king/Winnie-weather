@@ -1,5 +1,8 @@
 package com.winnieweather.example.f_splash
 
+import android.os.Bundle
+import android.os.PersistableBundle
+import android.view.View
 import androidx.annotation.LayoutRes
 import ru.surfstudio.android.core.mvp.activity.CoreActivityView
 import ru.surfstudio.android.core.mvp.presenter.CorePresenter
@@ -19,5 +22,16 @@ class SplashActivityView : CoreActivityView(), PushHandlingActivity {
 
     override fun createConfigurator() = SplashScreenConfigurator(intent)
 
-    override fun getScreenName(): String = "splash"
+    override fun getScreenName(): String = "SplashActivityView"
+
+    override fun onCreate(
+            savedInstanceState: Bundle?,
+            persistentState: PersistableBundle?,
+            viewRecreated: Boolean
+    ) {
+        super.onCreate(savedInstanceState, persistentState, viewRecreated)
+        window.decorView.apply {
+            systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        }
+    }
 }

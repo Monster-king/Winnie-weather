@@ -33,12 +33,7 @@ internal class SplashPresenter @Inject constructor(
         super.onFirstLoad()
 
         val delay = Completable.timer(TRANSITION_DELAY_MS, TimeUnit.MILLISECONDS)
-        val worker = initializeAppInteractor.initialize()
-        val merge = Completable
-                .merge(arrayListOf(delay, worker))
-                .toSingleDefault(EMPTY_STRING)
-
-        subscribeIoHandleError(merge,
+        subscribeIoHandleError(delay,
                 {
                     openNextScreen()
                 },

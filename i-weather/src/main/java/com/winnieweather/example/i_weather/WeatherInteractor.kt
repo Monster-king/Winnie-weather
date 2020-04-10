@@ -3,6 +3,7 @@ package com.winnieweather.example.i_weather
 import com.winnieweather.example.domain.weather.WeatherInfo
 import com.winnieweather.example.i_network.network.BaseNetworkInteractor
 import io.reactivex.Single
+import io.reactivex.subjects.PublishSubject
 import ru.surfstudio.android.connection.ConnectionProvider
 import ru.surfstudio.android.dagger.scope.PerApplication
 import javax.inject.Inject
@@ -16,6 +17,9 @@ class WeatherInteractor @Inject constructor(
         private val weatherRepository: WeatherRepository
 ) : BaseNetworkInteractor(connectionProvider) {
 
+    private val weatherInfoSubject = PublishSubject.create<WeatherInfo>()
+    val weatherInfoObservable = weatherInfoSubject.hide()
+
     /**
      * Возвращает текущую информацию погоды по заданной геолокации
      *
@@ -24,5 +28,8 @@ class WeatherInteractor @Inject constructor(
      */
     fun getCurrentWeatherInfo(lat: Float, lon: Float): Single<WeatherInfo> {
         return weatherRepository.getCurrentWeatherInfo(lat, lon)
+                .doOnSuccess {
+                    weatherInfoSubject.onNext(it)
+                }
     }
 }

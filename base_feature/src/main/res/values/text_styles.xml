@@ -125,6 +125,26 @@
         <item name="android:textColor">?android:textColorTertiary</item>
     </style>
 
+    <style name="Text.Light.34">
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="Text.Light.34.PrimaryColor">
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="Text.Light.64">
+        <item name="android:textSize">64sp</item>
+    </style>
+
+    <style name="Text.Light.64.PrimaryColor">
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="Text.Light.140">
+        <item name="android:textSize">140sp</item>
+    </style>
+
     <style name="Text.Regular">
         <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
@@ -239,6 +259,18 @@
 
     <style name="Text.Regular.24.TertiaryColor">
         <item name="android:textColor">?android:textColorTertiary</item>
+    </style>
+
+    <style name="Text.Regular.24.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text.Regular.34">
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="Text.Regular.34.PrimaryColor">
+        <item name="android:textColor">?android:textColorPrimary</item>
     </style>
 
     <style name="Text.Medium">

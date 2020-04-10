@@ -1,9 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.winnieweather.example.f_splash" >
+    package="com.winnieweather.example.f_splash">
 
     <application>
-        <activity android:name=".SplashActivityView"
-            android:screenOrientation="portrait">
+        <activity
+            android:name=".SplashActivityView"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Transparent">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

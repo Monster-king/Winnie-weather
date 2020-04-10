@@ -14,6 +14,7 @@ dependencies {
     implementation project(":i-push-notification")
     implementation project(":i-network")
     implementation project(":i-initialization")
+    implementation project(":i-weather")
 
     api rxBinding2.core
     api rxBinding2.kotlin

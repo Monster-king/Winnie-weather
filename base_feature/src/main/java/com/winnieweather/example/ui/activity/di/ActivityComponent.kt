@@ -9,6 +9,11 @@ import com.winnieweather.example.application.app.di.AppProxyDependencies
  * Компонент для @[PerActivity] скоупа
  */
 @PerActivity
-@Component(dependencies = [AppComponent::class],
-        modules = [ActivityModule::class])
+@Component(
+        dependencies = [AppComponent::class],
+        modules = [
+            ActivityModule::class,
+            LocationModule::class
+        ]
+)
 interface ActivityComponent : AppProxyDependencies, ActivityProxyDependencies

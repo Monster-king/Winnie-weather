@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="progress" format="integer" />
+    <declare-styleable name="VerticalDotProgressView">
+        <attr name="strokeColor" format="color" />
+        <attr name="dotColor" format="color" />
+        <attr name="maxProgress" format="integer" />
+        <attr name="progress" />
+    </declare-styleable>
+</resources>

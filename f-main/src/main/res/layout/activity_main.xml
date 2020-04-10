@@ -1,12 +1,203 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Main"
-        tools:ignore="HardcodedText" />
-</RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/main_activity_title_text"
+            android:textAppearance="@style/Text.Light.14.PrimaryColor"
+            app:layout_constraintBottom_toBottomOf="@id/location_ib"
+            app:layout_constraintEnd_toStartOf="@id/location_ib"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/location_ib" />
+
+        <ImageButton
+            android:id="@+id/location_ib"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@string/content_description"
+            android:src="@drawable/ic_my_location"
+            android:tint="@color/colorIconDefault"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/weather_icon_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="100sp"
+            app:layout_constraintBottom_toTopOf="@id/temp_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_ib" />
+
+        <TextView
+            android:id="@+id/temp_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="16dp"
+            android:textAppearance="@style/Text.Light.64.PrimaryColor"
+            app:layout_constraintBottom_toTopOf="@id/day_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10sp"
+            android:text="@string/main_activity_degree_celsius"
+            android:textAppearance="@style/Text.Light.34.PrimaryColor"
+            app:layout_constraintStart_toEndOf="@id/temp_tv"
+            app:layout_constraintTop_toTopOf="@id/temp_tv" />
+
+        <TextView
+            android:id="@+id/day_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="24dp"
+            android:textAppearance="@style/Text.Light.20.PrimaryColor"
+            app:layout_constraintBottom_toTopOf="@id/divider_view"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Понедельник," />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textAppearance="@style/Text.Light.20.SecondaryColor"
+            app:layout_constraintBottom_toBottomOf="@id/day_tv"
+            app:layout_constraintStart_toEndOf="@id/day_tv"
+            app:layout_constraintTop_toTopOf="@id/day_tv"
+            tools:text="16:00" />
+
+        <View
+            android:id="@+id/divider_view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@color/colorIconDefault"
+            app:layout_constraintBottom_toTopOf="@id/cloud_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/cloud_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/content_description"
+            android:src="@drawable/ic_cloud"
+            android:tint="@color/colorIconDefault"
+            app:layout_constraintBottom_toTopOf="@id/description_iv"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/cloud_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="@style/Text.Light.14.PrimaryColor"
+            app:layout_constraintBottom_toBottomOf="@id/cloud_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cloud_iv"
+            app:layout_constraintTop_toTopOf="@id/cloud_iv"
+            tools:text="В основном облачно" />
+
+        <ImageView
+            android:id="@+id/description_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="@string/content_description"
+            android:src="@drawable/ic_description"
+            android:tint="@color/colorIconAccent"
+            app:layout_constraintBottom_toTopOf="@id/bottom_img_container"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="@style/Text.Light.14.PrimaryColor"
+            app:layout_constraintBottom_toBottomOf="@id/description_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/description_iv"
+            app:layout_constraintTop_toTopOf="@id/description_iv"
+            tools:text="Небольшой проливной дождь" />
+
+        <FrameLayout
+            android:id="@+id/bottom_img_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@id/detail_info_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/city_image_iv"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:contentDescription="@string/content_description"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_round_rect_24_black_23" />
+
+            <TextView
+                android:id="@+id/city_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:textAppearance="@style/Text.Regular.24.White"
+                tools:text="Tashkent, UZ" />
+        </FrameLayout>
+
+        <com.winnieweather.example.f_main.detail.DetailInfoWidget
+            android:id="@+id/detail_info_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWindowBackgroundSecondary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

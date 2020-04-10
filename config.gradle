@@ -1,7 +1,7 @@
 ext {
     applicationName = "Winnie Weather"
 
-    androidStandardVersion = '0.5.0-alpha.80'                        //версия version-plugin
+    androidStandardVersion = '0.5.0-alpha.100'                        //версия version-plugin
 
     versions = [
             gradlePluginVersion             : '3.5.2',              //https://bit.ly/2NXD4Pe

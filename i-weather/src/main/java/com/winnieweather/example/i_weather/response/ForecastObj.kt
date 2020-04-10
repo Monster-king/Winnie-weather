@@ -13,6 +13,7 @@ import com.winnieweather.example.i_network.network.Transformable
  * @property wind информация о ветере
  * @property clouds информация об облачности
  * @property system системная информация
+ * @property name название местоположения
  */
 class ForecastObj(
         @SerializedName("weather") val weather: WeatherObj,
@@ -20,7 +21,8 @@ class ForecastObj(
         @SerializedName("visibility") val visibility: Long,
         @SerializedName("wind") val wind: WindObj,
         @SerializedName("clouds") val clouds: CloudsObj,
-        @SerializedName("sys") val system: SystemInfoObj
+        @SerializedName("sys") val system: SystemInfoObj,
+        @SerializedName("name") val name: String
 ) : Transformable<Forecast> {
 
     override fun transform() = Forecast(
@@ -29,6 +31,7 @@ class ForecastObj(
             visibility = visibility,
             wind = wind.transform(),
             clouds = clouds.transform(),
-            systemInfo = system.transform()
+            systemInfo = system.transform(),
+            name = name
     )
 }

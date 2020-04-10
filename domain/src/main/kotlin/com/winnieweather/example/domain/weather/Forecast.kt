@@ -8,7 +8,8 @@ package com.winnieweather.example.domain.weather
  * @property visibility видимость в метрах
  * @property wind информация о ветере
  * @property clouds информация об облачности
- * @property systemInfo системная информация
+ * @property systemInfo системная информация,
+ * @property name название местоположения
  */
 data class Forecast(
         val weather: Weather,
@@ -16,5 +17,6 @@ data class Forecast(
         val visibility: Long,
         val wind: Wind,
         val clouds: Clouds,
-        val systemInfo: SystemInfo
+        val systemInfo: SystemInfo,
+        val name: String
 )

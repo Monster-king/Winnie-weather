@@ -5,6 +5,7 @@ import ru.surfstudio.android.core.ui.navigation.fragment.tabfragment.TabFragment
 import ru.surfstudio.android.core.ui.provider.ActivityProvider
 import ru.surfstudio.android.core.ui.scope.ActivityPersistentScope
 import ru.surfstudio.android.dagger.scope.PerActivity
+import ru.surfstudio.android.location.DefaultLocationInteractor
 import ru.surfstudio.android.rxbus.RxBus
 
 /**
@@ -18,4 +19,5 @@ interface ActivityProxyDependencies {
     fun fragmentNavigator(): FragmentNavigator
     fun tabFragmentNavigator(): TabFragmentNavigator
     fun rxBus(): RxBus
+    fun locationInteractor(): DefaultLocationInteractor
 }
