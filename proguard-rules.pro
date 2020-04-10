@@ -59,8 +59,8 @@
 -dontwarn afu.org.checkerframework.checker.units.**
 
 #network
--keep class * implements ru.surfstudio.standard.i_network.network.Transformable
--keep class * implements ru.surfstudio.standard.i_network.network.response.BaseResponse
+-keep class * implements com.winnieweather.example.i_network.network.Transformable
+-keep class * implements com.winnieweather.example.i_network.network.response.BaseResponse
 
 #glide
 -dontwarn com.bumptech.glide.**
@@ -84,3 +84,7 @@
 #cross feature fragments
 -keep interface ru.surfstudio.android.core.ui.navigation.feature.route.feature.CrossFeatureFragment {*;}
 -keep class * implements ru.surfstudio.android.core.ui.navigation.feature.route.feature.CrossFeatureFragment
+
+#room
+-keep class * extends androidx.room.RoomDatabase
+-dontwarn androidx.room.paging.**
