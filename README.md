@@ -20,3 +20,13 @@
 Начнем разработку серверной части.
 
 Серверная чать: https://github.com/Monster-king/winnie-weather-web
+
+**Screenshots:**
+
+<div float="left">
+<kbd>
+<img alt="default screen" src="https://raw.githubusercontent.com/Monster-king/Winnie-weather/master/screenshots/main_screen.jpg" width="200">
+<img alt="search screen" src="https://raw.githubusercontent.com/Monster-king/Winnie-weather/master/screenshots/detail_screen.jpg" width="200">
+</kbd>
+</div>
+<br> <br> <br>
