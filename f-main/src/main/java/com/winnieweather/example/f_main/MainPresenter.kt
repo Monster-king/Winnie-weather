@@ -1,6 +1,7 @@
 package com.winnieweather.example.f_main
 
 import com.winnieweather.example.i_weather.WeatherInteractor
+import com.winnieweather.example.ui.placeholder.LoadState
 import com.winnieweather.example.ui.placeholder.loadstate.state.ErrorLoadState
 import io.reactivex.disposables.Disposables
 import ru.surfstudio.android.core.mvp.binding.rx.ui.BaseRxPresenter
@@ -29,6 +30,14 @@ class MainPresenter @Inject constructor(
 
     override fun onFirstLoad() {
         safeGetLocation()
+        subscribeToWeatherInfo()
+    }
+
+    private fun subscribeToWeatherInfo() {
+        subscribe(weatherInteractor.weatherInfoObservable) {
+            bm.weatherState.accept(it)
+            bm.loadState.accept(LoadState.NONE)
+        }
     }
 
     private fun safeGetLocation() {

@@ -1,7 +1,9 @@
 apply from: '../commonInteractorModule.gradle'
 apply from: '../unitTestConfiguration.gradle'
+apply from: '../commonKaptModule.gradle'
 
 dependencies {
     implementation project(":i-network")
-    implementation project(":i-database")
+    implementation room.rxJava
+    api room.runtime
 }

@@ -44,7 +44,8 @@ ext {
             materialRangeBarVersion         : '1.4.4',              //https://bit.ly/2TxqAkm
             timberVersion                   : '4.7.1',              //http://bit.ly/2LWbLaY
             rxJava2DebugVersion             : '1.4.0',              //https://bit.ly/322Qzo7
-            androidDebugToolsVersion        : '1.0'                 //https://bit.ly/2QMKLfe
+            androidDebugToolsVersion        : '1.0',                //https://bit.ly/2QMKLfe
+            roomVersion                     : '2.2.5'               //https://bit.ly/2xhYsfv
     ]
 
     app = [
@@ -145,5 +146,11 @@ ext {
             core           : "com.squareup.leakcanary:leakcanary-android:${versions.leakCanaryVersion}",
             supportFragment: "com.squareup.leakcanary:leakcanary-support-fragment:${versions.leakCanaryVersion}",
             coreNoOp       : "com.squareup.leakcanary:leakcanary-android-no-op:${versions.leakCanaryVersion}"
+    ]
+
+    room = [
+            runtime : "androidx.room:room-runtime:${versions.roomVersion}",
+            rxJava  : "androidx.room:room-rxjava2:${versions.roomVersion}",
+            roomKapt: "androidx.room:room-compiler:${versions.roomVersion}"
     ]
 }

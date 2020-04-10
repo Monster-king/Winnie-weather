@@ -47,7 +47,7 @@ fun String.parseDate(datePattern: String): Date {
  */
 fun Long.toLocalDate(): Date {
     val calendar = Calendar.getInstance()
-    calendar.timeInMillis = this
+    calendar.timeInMillis = this * 1000
     return calendar.time
 }
 

@@ -10,6 +10,7 @@ import ru.surfstudio.android.notification.PushHandler
 import ru.surfstudio.android.rx.extension.scheduler.SchedulersProvider
 import ru.surfstudio.android.shared.pref.NO_BACKUP_SHARED_PREF
 import com.winnieweather.example.base.util.StringsProvider
+import com.winnieweather.example.i_database.WeatherDatabase
 import com.winnieweather.example.i_initialization.InitializeAppInteractor
 import com.winnieweather.example.i_push_notification.storage.FcmStorage
 import com.winnieweather.example.i_weather.WeatherInteractor
@@ -35,5 +36,8 @@ interface AppProxyDependencies {
 
     @Named(NO_BACKUP_SHARED_PREF)
     fun sharedPreferences(): SharedPreferences
+
     fun weatherInteractor(): WeatherInteractor
+
+    fun database(): WeatherDatabase
 }

@@ -7,4 +7,5 @@ apply plugin: 'kotlin-kapt'
 dependencies {
     implementation di.dagger
     kapt di.daggerKapt
+    kapt room.roomKapt
 }

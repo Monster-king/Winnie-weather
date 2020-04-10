@@ -15,6 +15,7 @@ dependencies {
     implementation project(":i-network")
     implementation project(":i-initialization")
     implementation project(":i-weather")
+    implementation project(":i-database")
 
     api rxBinding2.core
     api rxBinding2.kotlin
